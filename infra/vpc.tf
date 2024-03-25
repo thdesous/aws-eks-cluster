@@ -8,3 +8,5 @@ resource "aws_vpc" "vpc-eks" {
     Project = "aws-eks-cluster"
   }
 }
+
+
