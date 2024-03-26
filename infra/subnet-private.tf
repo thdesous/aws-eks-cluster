@@ -1,5 +1,5 @@
 resource "aws_subnet" "subnet-priv-1a" {
-  vpc_id            = aws_vpc.vpc-eks.id
+  vpc_id            = aws_vpc.vpc.id
   cidr_block        = cidrsubnet(var.cidr_block, 8, 3)
   availability_zone = "${data.aws_region.region-current.name}a"
 
@@ -13,7 +13,7 @@ resource "aws_subnet" "subnet-priv-1a" {
 }
 
 resource "aws_subnet" "subnet-priv-1b" {
-  vpc_id            = aws_vpc.vpc-eks.id
+  vpc_id            = aws_vpc.vpc.id
   cidr_block        = cidrsubnet(var.cidr_block, 8, 4)
   availability_zone = "${data.aws_region.region-current.name}b"
 
