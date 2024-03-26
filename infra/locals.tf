@@ -1,6 +1,6 @@
 locals {
   tags = {
-    Project     = "eks-cluster"
+    Project     = "${var.project_name}"
     Enviromment = "local-dev"
   }
 }
