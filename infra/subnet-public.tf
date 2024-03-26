@@ -4,11 +4,13 @@ resource "aws_subnet" "subnet-pub-vpc-eks-1a" {
   availability_zone       = "${data.aws_region.region-current.name}a"
   map_public_ip_on_launch = true
 
-  tags = {
-    Name                     = "subnet-pub-vpc-eks-1a"
-    Project                  = "aws-eks-cluster"
-    "kubernetes.io/role/elb" = 1
-  }
+  tags = merge(
+    local.tags,
+    {
+      Name                     = "subnet-pub-vpc-eks-1a"
+      "kubernetes.io/role/elb" = 1
+    }
+  )
 }
 
 resource "aws_subnet" "subnet-pub-vpc-eks-1b" {
@@ -17,10 +19,11 @@ resource "aws_subnet" "subnet-pub-vpc-eks-1b" {
   availability_zone       = "${data.aws_region.region-current.name}b"
   map_public_ip_on_launch = true
 
-  tags = {
-    Name                     = "subnet-pub-vpc-eks-1b"
-    Project                  = "aws-eks-cluster"
-    "kubernetes.io/role/elb" = 1
-  }
+  tags = merge(
+    local.tags,
+    {
+      Name                     = "subnet-pub-vpc-eks-1b"
+      "kubernetes.io/role/elb" = 1
+    }
+  )
 }
-
