@@ -1,6 +1,6 @@
 locals {
   tags = {
-    Project     = "aws-eks-cluster"
+    Project     = "eks-cluster"
     Enviromment = "local-dev"
   }
 }
