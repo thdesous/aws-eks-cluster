@@ -27,3 +27,15 @@ resource "aws_subnet" "subnet-pub-1b" {
     }
   )
 }
+
+# Provides a resource to create an association between a route table and a subnet
+
+resource "aws_route_table_association" "route-table-ass-pub-1a" {
+  subnet_id      = aws_subnet.subnet-pub-1a.id
+  route_table_id = aws_route_table.route-table-pub.id
+}
+
+resource "aws_route_table_association" "route-table-ass-pub-1b" {
+  subnet_id      = aws_subnet.subnet-pub-1b.id
+  route_table_id = aws_route_table.route-table-pub.id
+}
