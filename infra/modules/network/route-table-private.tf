@@ -7,7 +7,7 @@ resource "aws_route_table" "route-table-pri-1a" {
   }
 
   tags = merge(
-    local.tags,
+    var.tags,
     {
       Name = "${var.project_name}-route-table-pri-1a"
     }
@@ -23,7 +23,7 @@ resource "aws_route_table" "route-table-pri-1b" {
   }
 
   tags = merge(
-    local.tags,
+    var.tags,
     {
       Name = "${var.project_name}-route-table-pri-1b"
     }
