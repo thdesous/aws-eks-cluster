@@ -1,0 +1,39 @@
+variable "project_name" {
+  type        = string
+  description = "Project name for tags"
+}
+
+variable "tags" {
+  type        = map(any)
+  description = "Tags to add to resources"
+}
+
+variable "cluster_name" {
+  type        = string
+  description = "EKS Cluster name "
+}
+
+variable "managed_amazon_eks_worker_node_policy_arn" {
+  type        = string
+  description = "ARN for Type AWS managed policy EKS Worker Node Policy"
+}
+
+variable "managed_amazon_ec2_container_registry_readonly_policy_arn" {
+  type        = string
+  description = "ARN for Type AWS managed policy EC2 Container Regitry ReadOnly Policy"
+}
+
+variable "managed_amazon_eks_cni_policy_arn" {
+  type        = string
+  description = "ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy"
+}
+
+variable "subnet-pri-1a" {
+  type        = string
+  description = "Private subnet-1a output value from network module for EKS Mangement Node Group"
+}
+
+variable "subnet-pri-1b" {
+  type        = string
+  description = "Private subnet-1b output value from network module for EKS Mangement Node Group"
+}
