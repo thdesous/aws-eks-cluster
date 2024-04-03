@@ -9,3 +9,7 @@ output "cluster-security-group-id" {
 output "oidc-issuer" {
   value = data.tls_certificate.tls-certificate-oidc
 }
+
+output "cluster-name" {
+  value = aws_eks_cluster.cluster.id
+}
