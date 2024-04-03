@@ -13,12 +13,12 @@ variable "managed_amazon_eks_cluster_policy_arn" {
   description = "ARN for Type AWS managed policy EKS Cluster Policy"
 }
 
-variable "subnet-pub-1a" {
+variable "subnet_pub_1a" {
   type        = string
   description = "Public subnet-1a output value from network module for creating EKS Cluster"
 }
 
-variable "subnet-pub-1b" {
+variable "subnet_pub_1b" {
   type        = string
   description = "Public subnet-1b output value from network module for creating EKS Cluster"
 }
