@@ -5,15 +5,31 @@ variable "project_name" {
   description = "Project name for tags"
 }
 
-# Network module variables
+## Network module variables
 variable "cidr_block" {
   type        = string
   description = "Networking CIDR block to be used for the VPC"
 }
 
-# Cluster module variables
+## Cluster module variables
 
 variable "managed_amazon_eks_cluster_policy_arn" {
   type        = string
   description = "ARN for Type AWS managed policy EKS Cluster Policy"
+}
+
+## Management node group module variables
+variable "managed_amazon_eks_worker_node_policy_arn" {
+  type        = string
+  description = "ARN for Type AWS managed policy EKS Worker Node Policy"
+}
+
+variable "managed_amazon_ec2_container_registry_readonly_policy_arn" {
+  type        = string
+  description = "ARN for Type AWS managed policy EC2 Container Regitry ReadOnly Policy"
+}
+
+variable "managed_amazon_eks_cni_policy_arn" {
+  type        = string
+  description = "ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy"
 }
