@@ -28,12 +28,12 @@ variable "managed_amazon_eks_cni_policy_arn" {
   description = "ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy"
 }
 
-variable "subnet-pri-1a" {
+variable "subnet_pri_1a" {
   type        = string
   description = "Private subnet-1a output value from network module for EKS Mangement Node Group"
 }
 
-variable "subnet-pri-1b" {
+variable "subnet_pri_1b" {
   type        = string
   description = "Private subnet-1b output value from network module for EKS Mangement Node Group"
 }

@@ -5,8 +5,8 @@ resource "aws_eks_node_group" "mng-node-group" {
   capacity_type   = "SPOT"
   instance_types  = ["t2.micro"]
   subnet_ids = [
-    var.subnet-pri-1a,
-    var.subnet-pri-1b
+    var.subnet_pri_1a,
+    var.subnet_pri_1b
   ]
 
   scaling_config {
