@@ -13,3 +13,7 @@ output "oidc-issuer" {
 output "cluster-name" {
   value = aws_eks_cluster.cluster.id
 }
+
+output "oidc-url-identity" {
+  value = aws_eks_cluster.cluster.identity[0].oidc[0].issuer
+}
