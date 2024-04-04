@@ -25,3 +25,10 @@ module "module-mng-node-group" {
   subnet_pri_1b                                             = module.module-network.subnet-pri-1b
   tags                                                      = local.tags
 }
+
+module "module-load-balancer-controller" {
+  source            = "./modules/load-balancer-controller"
+  project_name      = var.project_name
+  oidc_url_identity = module.module-cluster.oidc-url-identity
+  tags              = local.tags
+}
