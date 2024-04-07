@@ -6,6 +6,4 @@ repos:
       args:
         - --args=-recursive
     - id: terraform_validate
-      verbose: true
-      log_file: ./logfile.txt
-    
+      verbose: true    
