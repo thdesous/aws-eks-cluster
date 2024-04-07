@@ -6,5 +6,4 @@ repos:
       args:
         - --args=-recursive
     - id: terraform_validate
-      args:
-        - --version=1.7.5
+      args: ['--version=1.7.5']
