@@ -17,6 +17,11 @@ output "cluster-ca-cert" {
 output "cluster-endpoint" {
   value = aws_eks_cluster.cluster.endpoint
 }
+
+output "cluster-status" {
+  value = aws_eks_cluster.cluster.status
+}
+
 output "oidc-issuer" {
   value = data.tls_certificate.tls-certificate-oidc
 }

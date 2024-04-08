@@ -40,5 +40,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_management-node-group-status"></a> [management-node-group-status](#output\_management-node-group-status) | n/a |
 <!-- END_TF_DOCS -->

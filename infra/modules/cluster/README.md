@@ -44,6 +44,7 @@ No modules.
 | <a name="output_cluster-endpoint"></a> [cluster-endpoint](#output\_cluster-endpoint) | n/a |
 | <a name="output_cluster-name"></a> [cluster-name](#output\_cluster-name) | n/a |
 | <a name="output_cluster-security-group-id"></a> [cluster-security-group-id](#output\_cluster-security-group-id) | n/a |
+| <a name="output_cluster-status"></a> [cluster-status](#output\_cluster-status) | n/a |
 | <a name="output_cluster-vpc-config"></a> [cluster-vpc-config](#output\_cluster-vpc-config) | n/a |
 | <a name="output_oidc-issuer"></a> [oidc-issuer](#output\_oidc-issuer) | n/a |
 | <a name="output_oidc-url-identity"></a> [oidc-url-identity](#output\_oidc-url-identity) | n/a |
