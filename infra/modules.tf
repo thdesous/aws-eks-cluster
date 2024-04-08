@@ -8,6 +8,7 @@ module "module-network" {
 module "module-cluster" {
   source                                = "./modules/cluster"
   project_name                          = var.project_name
+  cluster_name                          = var.cluster_name
   managed_amazon_eks_cluster_policy_arn = var.managed_amazon_eks_cluster_policy_arn
   subnet_pub_1a                         = module.module-network.subnet-pub-1a
   subnet_pub_1b                         = module.module-network.subnet-pub-1b
@@ -29,6 +30,7 @@ module "module-mng-node-group" {
 module "module-load-balancer-controller" {
   source            = "./modules/load-balancer-controller"
   project_name      = var.project_name
+  cluster_name      = module.module-cluster.cluster-name
   oidc_url_identity = module.module-cluster.oidc-url-identity
   tags              = local.tags
 }

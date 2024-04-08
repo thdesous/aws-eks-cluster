@@ -13,6 +13,11 @@ variable "cidr_block" {
 
 ## Cluster module variables
 
+variable "cluster_name" {
+  type        = string
+  description = "EKS Cluster name"
+}
+
 variable "managed_amazon_eks_cluster_policy_arn" {
   type        = string
   description = "ARN for Type AWS managed policy EKS Cluster Policy"

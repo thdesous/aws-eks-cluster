@@ -3,6 +3,11 @@ variable "project_name" {
   description = "Project name for tags"
 }
 
+variable "cluster_name" {
+  type        = string
+  description = "EKS Cluster name"
+}
+
 variable "tags" {
   type        = map(any)
   description = "Tags to add to resources"
