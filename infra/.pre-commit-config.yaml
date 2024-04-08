@@ -3,7 +3,12 @@ repos:
     rev: v1.77.0
     hooks:
     - id: terraform_fmt
+      verbose: true
       args:
         - --args=-recursive
     - id: terraform_validate
       verbose: true    
+    - id: terraform_docs
+      verbose: true
+      args:
+        - --args=--output-file README.md
