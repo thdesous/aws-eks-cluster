@@ -19,6 +19,8 @@ module "module-mng-node-group" {
   source                                                    = "./modules/mng-node-group"
   project_name                                              = var.project_name
   cluster_name                                              = module.module-cluster.cluster-name
+  capacity_type                                             = var.capacity_type
+  instance_types                                            = var.instance_types
   managed_amazon_eks_worker_node_policy_arn                 = var.managed_amazon_eks_worker_node_policy_arn
   managed_amazon_ec2_container_registry_readonly_policy_arn = var.managed_amazon_ec2_container_registry_readonly_policy_arn
   managed_amazon_eks_cni_policy_arn                         = var.managed_amazon_eks_cni_policy_arn

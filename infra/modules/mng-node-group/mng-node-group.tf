@@ -2,8 +2,8 @@ resource "aws_eks_node_group" "mng-node-group" {
   cluster_name    = var.cluster_name
   node_group_name = "${var.project_name}-mng-node-group"
   node_role_arn   = aws_iam_role.mng-node-group-iam-role.arn
-  capacity_type   = "SPOT"
-  instance_types  = ["t2.micro"]
+  capacity_type   = var.capacity_type
+  instance_types  = var.instance_types
   subnet_ids = [
     var.subnet_pri_1a,
     var.subnet_pri_1b
@@ -11,7 +11,7 @@ resource "aws_eks_node_group" "mng-node-group" {
 
   scaling_config {
     desired_size = 1
-    max_size     = 1
+    max_size     = 2
     min_size     = 1
   }
 

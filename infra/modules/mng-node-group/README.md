@@ -27,7 +27,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_capacity_type"></a> [capacity\_type](#input\_capacity\_type) | Type of capacity associated with the EKS Node Group. Valid values: ON\_DEMAND, SPOT | `string` | n/a | yes |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | EKS Cluster name | `string` | n/a | yes |
+| <a name="input_instance_types"></a> [instance\_types](#input\_instance\_types) | List of instance types associated with the EKS Node Group. Defaults to ['t3.medium'] | `list(string)` | n/a | yes |
 | <a name="input_managed_amazon_ec2_container_registry_readonly_policy_arn"></a> [managed\_amazon\_ec2\_container\_registry\_readonly\_policy\_arn](#input\_managed\_amazon\_ec2\_container\_registry\_readonly\_policy\_arn) | ARN for Type AWS managed policy EC2 Container Regitry ReadOnly Policy | `string` | n/a | yes |
 | <a name="input_managed_amazon_eks_cni_policy_arn"></a> [managed\_amazon\_eks\_cni\_policy\_arn](#input\_managed\_amazon\_eks\_cni\_policy\_arn) | ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy | `string` | n/a | yes |
 | <a name="input_managed_amazon_eks_worker_node_policy_arn"></a> [managed\_amazon\_eks\_worker\_node\_policy\_arn](#input\_managed\_amazon\_eks\_worker\_node\_policy\_arn) | ARN for Type AWS managed policy EKS Worker Node Policy | `string` | n/a | yes |
