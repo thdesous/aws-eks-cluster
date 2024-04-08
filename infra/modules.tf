@@ -2,7 +2,7 @@ module "module-network" {
   source       = "./modules/network"
   cidr_block   = var.cidr_block
   project_name = var.project_name
-  tags         = local.tags
+  tags         = var.tags
 }
 
 module "module-cluster" {
@@ -12,7 +12,7 @@ module "module-cluster" {
   managed_amazon_eks_cluster_policy_arn = var.managed_amazon_eks_cluster_policy_arn
   subnet_pub_1a                         = module.module-network.subnet-pub-1a
   subnet_pub_1b                         = module.module-network.subnet-pub-1b
-  tags                                  = local.tags
+  tags                                  = var.tags
 }
 
 module "module-mng-node-group" {
@@ -26,7 +26,7 @@ module "module-mng-node-group" {
   managed_amazon_eks_cni_policy_arn                         = var.managed_amazon_eks_cni_policy_arn
   subnet_pri_1a                                             = module.module-network.subnet-pri-1a
   subnet_pri_1b                                             = module.module-network.subnet-pri-1b
-  tags                                                      = local.tags
+  tags                                                      = var.tags
 }
 
 module "module-load-balancer-controller" {
@@ -34,5 +34,5 @@ module "module-load-balancer-controller" {
   project_name      = var.project_name
   cluster_name      = module.module-cluster.cluster-name
   oidc_url_identity = module.module-cluster.oidc-url-identity
-  tags              = local.tags
+  tags              = var.tags
 }

@@ -10,7 +10,13 @@ variable "region_name" {
   description = "Name of selected region for create the resources"
 }
 
+variable "tags" {
+  type        = map(any)
+  description = "A map of tags to add to all resources"
+}
+
 ## Network module variables
+
 variable "cidr_block" {
   type        = string
   description = "Networking CIDR block to be used for the VPC"
