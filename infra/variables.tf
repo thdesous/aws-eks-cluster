@@ -5,6 +5,11 @@ variable "project_name" {
   description = "Project name for tags"
 }
 
+variable "region_name" {
+  type        = string
+  description = "Name of selected region for create the resources"
+}
+
 ## Network module variables
 variable "cidr_block" {
   type        = string

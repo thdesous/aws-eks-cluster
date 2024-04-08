@@ -22,7 +22,7 @@ terraform {
 
 provider "aws" {
   # Configuration options
-  region = "us-east-1"
+  region = var.region_name
 }
 provider "kubernetes" {
   host                   = module.module-cluster.cluster-endpoint

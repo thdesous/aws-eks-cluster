@@ -37,10 +37,13 @@ No resources.
 | <a name="input_managed_amazon_eks_cni_policy_arn"></a> [managed\_amazon\_eks\_cni\_policy\_arn](#input\_managed\_amazon\_eks\_cni\_policy\_arn) | ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy | `string` | n/a | yes |
 | <a name="input_managed_amazon_eks_worker_node_policy_arn"></a> [managed\_amazon\_eks\_worker\_node\_policy\_arn](#input\_managed\_amazon\_eks\_worker\_node\_policy\_arn) | ARN for Type AWS managed policy EKS Worker Node Policy | `string` | n/a | yes |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name for tags | `string` | n/a | yes |
+| <a name="input_region_name"></a> [region\_name](#input\_region\_name) | Name of selected region for create the resources | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
 | <a name="output_cluster-name"></a> [cluster-name](#output\_cluster-name) | Test for debug output |
+| <a name="output_cluster-status"></a> [cluster-status](#output\_cluster-status) | Status of the EKS cluster. One of CREATING, ACTIVE, DELETING, FAILED |
+| <a name="output_management-node-group-status"></a> [management-node-group-status](#output\_management-node-group-status) | Status of the EKS Node Group |
 <!-- END_TF_DOCS -->
