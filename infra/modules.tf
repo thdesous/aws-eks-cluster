@@ -1,3 +1,10 @@
+module "module-bucket" {
+  source              = "./modules/bucket"
+  project_name        = var.project_name
+  bucket_tfstate_name = var.bucket_tfstate_name
+  tags                = var.tags
+}
+
 module "module-network" {
   source       = "./modules/network"
   cidr_block   = var.cidr_block

@@ -15,6 +15,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_module-bucket"></a> [module-bucket](#module\_module-bucket) | ./modules/bucket | n/a |
 | <a name="module_module-cluster"></a> [module-cluster](#module\_module-cluster) | ./modules/cluster | n/a |
 | <a name="module_module-load-balancer-controller"></a> [module-load-balancer-controller](#module\_module-load-balancer-controller) | ./modules/load-balancer-controller | n/a |
 | <a name="module_module-mng-node-group"></a> [module-mng-node-group](#module\_module-mng-node-group) | ./modules/mng-node-group | n/a |
@@ -28,6 +29,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_bucket_tfstate_name"></a> [bucket\_tfstate\_name](#input\_bucket\_tfstate\_name) | The name for the bucket for terraform state file | `string` | n/a | yes |
 | <a name="input_capacity_type"></a> [capacity\_type](#input\_capacity\_type) | Type of capacity associated with the EKS Node Group. Valid values: ON\_DEMAND, SPOT | `string` | `"SPOT"` | no |
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | Networking CIDR block to be used for the VPC | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | EKS Cluster name | `string` | `"my-cluster"` | no |

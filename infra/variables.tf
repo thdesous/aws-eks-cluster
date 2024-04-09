@@ -70,3 +70,10 @@ variable "managed_amazon_eks_cni_policy_arn" {
   description = "ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy"
   default     = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
 }
+
+## Bucket module variables
+
+variable "bucket_tfstate_name" {
+  type        = string
+  description = "The name for the bucket for terraform state file"
+}
