@@ -5,7 +5,8 @@ resource "aws_nat_gateway" "nat-gateway-pub-1a" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-nat-gateway-pub-1a"
+      Name    = "${var.project_name}-nat-gateway-pub-1a"
+      Project = "${var.project_name}"
     }
   )
 }
@@ -17,7 +18,8 @@ resource "aws_nat_gateway" "nat-gateway-pub-1b" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-nat-gateway-pub-1b"
+      Name    = "${var.project_name}-nat-gateway-pub-1b"
+      Project = "${var.project_name}"
     }
   )
 }

@@ -18,7 +18,8 @@ resource "aws_iam_role" "iam-role" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-iam-role"
+      Name    = "${var.project_name}-iam-role"
+      Project = "${var.project_name}"
     }
   )
 }

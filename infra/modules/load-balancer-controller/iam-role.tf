@@ -25,7 +25,8 @@ EOF
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-lb-controller-iam-role"
+      Name    = "${var.project_name}-lb-controller-iam-role"
+      Project = "${var.project_name}"
     }
   )
 }

@@ -8,6 +8,7 @@ resource "aws_subnet" "subnet-pub-1a" {
     var.tags,
     {
       Name                     = "${var.project_name}-subnet-pub-1a"
+      Project                  = "${var.project_name}"
       "kubernetes.io/role/elb" = 1
     }
   )
@@ -23,6 +24,7 @@ resource "aws_subnet" "subnet-pub-1b" {
     var.tags,
     {
       Name                     = "${var.project_name}-subnet-pub-1b"
+      Project                  = "${var.project_name}"
       "kubernetes.io/role/elb" = 1
     }
   )

@@ -7,6 +7,7 @@ resource "aws_subnet" "subnet-pri-1a" {
     var.tags,
     {
       Name                              = "${var.project_name}-subnet-pri-1a"
+      Project                           = "${var.project_name}"
       "kubernetes.io/role/internal-elb" = 1
     }
   )
@@ -21,6 +22,7 @@ resource "aws_subnet" "subnet-pri-1b" {
     var.tags,
     {
       Name                              = "${var.project_name}-subnet-pri-1b"
+      Project                           = "${var.project_name}"
       "kubernetes.io/role/internal-elb" = 1
     }
   )

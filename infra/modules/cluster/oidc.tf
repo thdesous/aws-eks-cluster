@@ -10,7 +10,8 @@ resource "aws_iam_openid_connect_provider" "iam-openid-connect-provider" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-iam-openid-connect-provider"
+      Name    = "${var.project_name}-iam-openid-connect-provider"
+      Project = "${var.project_name}"
     }
   )
 }

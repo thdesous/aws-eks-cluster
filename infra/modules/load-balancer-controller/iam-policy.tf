@@ -8,7 +8,8 @@ resource "aws_iam_policy" "lb-controller-iam-policy" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-lb-controller-iam-policy"
+      Name    = "${var.project_name}-lb-controller-iam-policy"
+      Project = "${var.project_name}"
     }
   )
 }

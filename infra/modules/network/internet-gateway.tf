@@ -4,7 +4,8 @@ resource "aws_internet_gateway" "internet-gateway" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-internet-gateway"
+      Name    = "${var.project_name}-internet-gateway"
+      Project = "${var.project_name}"
     }
   )
 }

@@ -20,7 +20,8 @@ resource "aws_eks_cluster" "cluster" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-${var.cluster_name}"
+      Name    = "${var.project_name}-${var.cluster_name}"
+      Project = "${var.project_name}"
     }
   )
 }

@@ -9,7 +9,8 @@ resource "aws_route_table" "route-table-pub" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-route-table-pub"
+      Name    = "${var.project_name}-route-table-pub"
+      Project = "${var.project_name}"
     }
   )
 }

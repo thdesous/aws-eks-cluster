@@ -18,7 +18,8 @@ resource "aws_iam_role" "mng-node-group-iam-role" {
   tags = merge(
     var.tags,
     {
-      Name = "${var.project_name}-mng-node-group-iam-role"
+      Name    = "${var.project_name}-mng-node-group-iam-role"
+      Project = "${var.project_name}"
     }
   )
 }
