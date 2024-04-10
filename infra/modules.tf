@@ -2,6 +2,7 @@ module "module-bucket" {
   source              = "./modules/bucket"
   project_name        = var.project_name
   bucket_tfstate_name = var.bucket_tfstate_name
+  count               = var.use_existing_bucket_tfstate ? 0 : 1
   tags                = var.tags
 }
 

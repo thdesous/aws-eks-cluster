@@ -77,3 +77,10 @@ variable "bucket_tfstate_name" {
   type        = string
   description = "The name for the bucket for terraform state file"
 }
+
+# No arquivo aws-eks-cluster/infra/variables.tf, adicione a variável use_existing_bucket:
+variable "use_existing_bucket_tfstate" {
+  type        = bool
+  description = "Used for to an existing S3 bucket or create a new one for save terraform state file"
+  default     = false
+}

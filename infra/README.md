@@ -41,6 +41,7 @@ No resources.
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name for tags | `string` | `"lab-eks"` | no |
 | <a name="input_region_name"></a> [region\_name](#input\_region\_name) | Name of selected region for create the resources | `string` | `"us-east-1"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(any)` | n/a | yes |
+| <a name="input_use_existing_bucket_tfstate"></a> [use\_existing\_bucket\_tfstate](#input\_use\_existing\_bucket\_tfstate) | Used for to an existing S3 bucket or create a new one for save terraform state file | `bool` | `false` | no |
 
 ## Outputs
 
