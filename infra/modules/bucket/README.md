@@ -24,9 +24,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_bucket_tfstate_name"></a> [bucket\_tfstate\_name](#input\_bucket\_tfstate\_name) | The name for the bucket for terraform state file | `string` | n/a | yes |
+| <a name="input_existing_bucket_name"></a> [existing\_bucket\_name](#input\_existing\_bucket\_name) | Name of the existing bucket to be used for storing the terraform state file | `string` | `"null"` | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name for tags | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to add to resources | `map(any)` | n/a | yes |
+| <a name="input_use_existing_bucket_tfstate"></a> [use\_existing\_bucket\_tfstate](#input\_use\_existing\_bucket\_tfstate) | Flag to indicate whether to use an existing bucket for storing the terraform state file | `bool` | `false` | no |
 
 ## Outputs
 

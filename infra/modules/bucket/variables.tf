@@ -3,9 +3,16 @@ variable "project_name" {
   description = "Project name for tags"
 }
 
-variable "bucket_tfstate_name" {
+variable "existing_bucket_name" {
   type        = string
-  description = "The name for the bucket for terraform state file"
+  description = "Name of the existing bucket to be used for storing the terraform state file"
+  default     = "null"
+}
+
+variable "use_existing_bucket_tfstate" {
+  type        = bool
+  description = "Flag to indicate whether to use an existing bucket for storing the terraform state file"
+  default     = false
 }
 
 variable "tags" {

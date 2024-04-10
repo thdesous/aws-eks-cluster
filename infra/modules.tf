@@ -1,9 +1,9 @@
 module "module-bucket" {
-  source              = "./modules/bucket"
-  project_name        = var.project_name
-  bucket_tfstate_name = var.bucket_tfstate_name
-  count               = var.use_existing_bucket_tfstate ? 0 : 1
-  tags                = var.tags
+  source                      = "./modules/bucket"
+  project_name                = var.project_name
+  use_existing_bucket_tfstate = var.use_existing_bucket_tfstate
+  existing_bucket_name        = var.use_existing_bucket_tfstate ? var.existing_bucket_name : null
+  tags                        = var.tags
 }
 
 module "module-network" {

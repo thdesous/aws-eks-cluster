@@ -73,14 +73,14 @@ variable "managed_amazon_eks_cni_policy_arn" {
 
 ## Bucket module variables
 
-variable "bucket_tfstate_name" {
+variable "existing_bucket_name" {
   type        = string
-  description = "The name for the bucket for terraform state file"
+  description = "Name of the existing bucket to be used for storing the terraform state file"
+  default     = "null"
 }
 
-# No arquivo aws-eks-cluster/infra/variables.tf, adicione a variável use_existing_bucket:
 variable "use_existing_bucket_tfstate" {
   type        = bool
-  description = "Used for to an existing S3 bucket or create a new one for save terraform state file"
+  description = "Flag to indicate whether to use an existing bucket for storing the terraform state file"
   default     = false
 }

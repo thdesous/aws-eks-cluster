@@ -29,10 +29,10 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_bucket_tfstate_name"></a> [bucket\_tfstate\_name](#input\_bucket\_tfstate\_name) | The name for the bucket for terraform state file | `string` | n/a | yes |
 | <a name="input_capacity_type"></a> [capacity\_type](#input\_capacity\_type) | Type of capacity associated with the EKS Node Group. Valid values: ON\_DEMAND, SPOT | `string` | `"SPOT"` | no |
 | <a name="input_cidr_block"></a> [cidr\_block](#input\_cidr\_block) | Networking CIDR block to be used for the VPC | `string` | `"10.0.0.0/16"` | no |
 | <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | EKS Cluster name | `string` | `"my-cluster"` | no |
+| <a name="input_existing_bucket_name"></a> [existing\_bucket\_name](#input\_existing\_bucket\_name) | Name of the existing bucket to be used for storing the terraform state file | `string` | `"null"` | no |
 | <a name="input_instance_types"></a> [instance\_types](#input\_instance\_types) | List of instance types associated with the EKS Node Group | `list(string)` | <pre>[<br>  "t2.micro"<br>]</pre> | no |
 | <a name="input_managed_amazon_ec2_container_registry_readonly_policy_arn"></a> [managed\_amazon\_ec2\_container\_registry\_readonly\_policy\_arn](#input\_managed\_amazon\_ec2\_container\_registry\_readonly\_policy\_arn) | ARN for Type AWS managed policy EC2 Container Regitry ReadOnly Policy | `string` | `"arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"` | no |
 | <a name="input_managed_amazon_eks_cluster_policy_arn"></a> [managed\_amazon\_eks\_cluster\_policy\_arn](#input\_managed\_amazon\_eks\_cluster\_policy\_arn) | ARN for Type AWS managed policy EKS Cluster Policy | `string` | `"arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"` | no |
@@ -41,7 +41,7 @@ No resources.
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name for tags | `string` | `"lab-eks"` | no |
 | <a name="input_region_name"></a> [region\_name](#input\_region\_name) | Name of selected region for create the resources | `string` | `"us-east-1"` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | A map of tags to add to all resources | `map(any)` | n/a | yes |
-| <a name="input_use_existing_bucket_tfstate"></a> [use\_existing\_bucket\_tfstate](#input\_use\_existing\_bucket\_tfstate) | Used for to an existing S3 bucket or create a new one for save terraform state file | `bool` | `false` | no |
+| <a name="input_use_existing_bucket_tfstate"></a> [use\_existing\_bucket\_tfstate](#input\_use\_existing\_bucket\_tfstate) | Flag to indicate whether to use an existing bucket for storing the terraform state file | `bool` | `false` | no |
 
 ## Outputs
 
