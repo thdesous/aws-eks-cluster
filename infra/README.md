@@ -47,6 +47,8 @@ No resources.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_bucket-tfstate-name"></a> [bucket-tfstate-name](#output\_bucket-tfstate-name) | Name of the bucket |
+| <a name="output_bucket-tfstate-object-key"></a> [bucket-tfstate-object-key](#output\_bucket-tfstate-object-key) | Full path to the object inside the bucket |
 | <a name="output_cluster-name"></a> [cluster-name](#output\_cluster-name) | Test for debug output |
 | <a name="output_cluster-status"></a> [cluster-status](#output\_cluster-status) | Status of the EKS cluster. One of CREATING, ACTIVE, DELETING, FAILED |
 | <a name="output_management-node-group-status"></a> [management-node-group-status](#output\_management-node-group-status) | Status of the EKS Node Group |

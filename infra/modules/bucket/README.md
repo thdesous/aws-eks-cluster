@@ -18,6 +18,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_s3_bucket.bucket-tfstate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket) | resource |
+| [aws_s3_object.bucket-tfstate-object](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object) | resource |
 
 ## Inputs
 
@@ -32,5 +33,5 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_bucket-tfstate-name"></a> [bucket-tfstate-name](#output\_bucket-tfstate-name) | n/a |
-| <a name="output_bucket-tfstate-region"></a> [bucket-tfstate-region](#output\_bucket-tfstate-region) | n/a |
+| <a name="output_bucket-tfstate-object-key"></a> [bucket-tfstate-object-key](#output\_bucket-tfstate-object-key) | n/a |
 <!-- END_TF_DOCS -->
