@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket-tfstate" {
-  count  = var.use_existing_bucket_tfstate ? 0 : 1
+  count  = var.create_new_bucket_tfstate ? 1 : 0
   bucket = "${var.project_name}-bucket-tfstate-${uuid()}"
 
   tags = merge(
@@ -12,9 +12,9 @@ resource "aws_s3_bucket" "bucket-tfstate" {
 }
 
 resource "aws_s3_object" "bucket-tfstate-object" {
-  count  = var.use_existing_bucket_tfstate ? 0 : 1
+  count  = var.create_new_bucket_tfstate ? 1 : 0
   bucket = aws_s3_bucket.bucket-tfstate[0].id
-  key    = "terraform-states/projects/${var.project_name}/${var.tags["Environment"]}/"
+  key    = "tfstates/${var.project_name}/${var.tags["Environment"]}/tfstate"
 
   tags = merge(
     var.tags,

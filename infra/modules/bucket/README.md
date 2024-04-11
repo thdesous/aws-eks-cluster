@@ -24,10 +24,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_existing_bucket_name"></a> [existing\_bucket\_name](#input\_existing\_bucket\_name) | Name of the existing bucket to be used for storing the terraform state file | `string` | `"null"` | no |
+| <a name="input_create_new_bucket_tfstate"></a> [create\_new\_bucket\_tfstate](#input\_create\_new\_bucket\_tfstate) | Selection to create a new bucket, if you choose to use the bucket to store the terraform state | `bool` | `false` | no |
 | <a name="input_project_name"></a> [project\_name](#input\_project\_name) | Project name for tags | `string` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | Tags to add to resources | `map(any)` | n/a | yes |
-| <a name="input_use_existing_bucket_tfstate"></a> [use\_existing\_bucket\_tfstate](#input\_use\_existing\_bucket\_tfstate) | Flag to indicate whether to use an existing bucket for storing the terraform state file | `bool` | `false` | no |
 
 ## Outputs
 
@@ -35,4 +34,5 @@ No modules.
 |------|-------------|
 | <a name="output_bucket-tfstate-name"></a> [bucket-tfstate-name](#output\_bucket-tfstate-name) | n/a |
 | <a name="output_bucket-tfstate-object-key"></a> [bucket-tfstate-object-key](#output\_bucket-tfstate-object-key) | n/a |
+| <a name="output_bucket-tfstate-region"></a> [bucket-tfstate-region](#output\_bucket-tfstate-region) | n/a |
 <!-- END_TF_DOCS -->
