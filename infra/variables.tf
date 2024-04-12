@@ -70,11 +70,3 @@ variable "managed_amazon_eks_cni_policy_arn" {
   description = "ARN for Type AWS managed policy EKS CNI (Container Networking Interface) Policy"
   default     = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
 }
-
-## Bucket module variables
-
-variable "create_new_bucket_tfstate" {
-  type        = bool
-  description = "Selection to create a new bucket, if you choose to use the bucket to store the terraform state"
-  default     = false
-}
